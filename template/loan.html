@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loan Predictor App</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=NTz0u5enZiwIrO1sVHn1rgf-llEh6RNBecDV5m_aUPSB2czMaUj_pQHQUxLLwarT0zUNoczzHrqx_zR7JZ_-yFHF81ohrLfms-O_mwzx7fVF9bteUz0aep86gQNSo_i-otHvDtRhKtOF7k9xqjC6cBaZl22DA_ZfEIm34po3lOYg_NViygbV4P0ij1HajcKNWmE7Fl_D_jcekUCuKuqjpzSS9MdKMvg7za8OjurhiM3ILTrgjKSVC75ZR8bxnLTYMFzykqc2gBiWUF5Bx0EMF_8NMB-J4Vda9N4ayUvcadnDIC0OaQZujet8pHoDvGxEcCT6XqXfFs4v80mDuuf-9nyMN1_Eyjie-Bvp0KtXIBWtsfb1C12BTT43aS3_WzV1ZLDUufs5J6Pc2bHAT_QuqGYeZsL2V_9iDjJfLzEHoO4vqnuH0ZFJLI7HWJ-tpoXwFmrpx6NnQtchqRzo_RBStcMdGGPs-Qd9FwAM4xj0OnntDyvzpt599wOtAq4y83iCdNQjL0_Y_F1Q_Thdd4i15NczTKIviGJVfw8AWMpz1za43p8HFzZpkWWi0X58AH6yzEfGMsVtAdPEAH3jehoZcE14ynD31LXANwbBA56CgHkHxWSwFKAsl36eqqENAz5AB02i5A0wPWtp_wFdFysAXaMbOBRE5_L2a7TbnbGPrfDUqVoISDrhwozsJcSo_Dig4_EMgq6i1zlB3VdeNTUXkYMiaP9hrLn8lyyZgPvmZ9cmiqIkDBZN-EGLgaY1MgVI4w6WG3SkPfPWwhR0w4wgE2Ph1cXJuGKIBXy-ioOZhZEXmKoiHQ5wEKQJVVAQIB4K8jy3us_QQvvyt3qPpPeA4CwCppt7NZiEi12wBZX0kFrJ1aB-k9Z3bpy_FG1u-8FKuh9ikxtFdg0CjR3PuehMilJLeEW5WpfuIUNEzCmyyPzW7gRYEESziYrCQI3m0KnG1p0mg-h-i2mRLvrRPZwYofFQIKJ84xivYqQOGIDFgPVut2rJ3AKxPD8_lyXb1S0PlS8uwo2hMYPFSts0QKfe50lNw8xuyQhBcBio4zTbvaJYdlaa27L347LzZuEgt90YkM0PrlXFdod2x_hxkigxoQhDC0LfQtdD97QFID0YU7SCuORAspTOG7JLRYtwisNYtVYsvETd-dy9ug04rzXozY4sxELtBf04yzYJlkcn2VC6cvRHK888bZJAA5dPxC2dZV8YDhnlHlvgKP9ddEwIv_FhrNEpX4penA6JeWs_9V12UruUsbjCaHWsWeaDlnYPHb1lwbGdYmjECFxHhwaaaHjHfurI_IuiYHAFjwcMIj-0LjO1cc1DK8CDvUwK433DkMCEeT6kfPINbY7j-CtjCTm3aqXuaRWTLmWqNWADEHBO-lkHssU3KIeVulM9j6bDENUyxY6hONYh4TrbhNrkNrb-zK_33cQ29WdS4uoqc0cUV7mDOupSw0QPF37KNe-sLCCjSI2shymhQ67dV5DbbOl7wBxZBDtAyRIthQn_saZSHou5cbT2LMb3N_DqLXc0P6PIsDLsgC0Id5hdmp5i1Ux_Tr0HECW4td5tmq-PvmPhiKVRjfHRvNU4TtuuD7wlfODHzhANgkEkn8RrGCAovlp5Vm4N8rktVVEl8MDeOtR6LoWsjmmjJ_aKWqhHWhu5-zrgcZVahyv6MjX9vAPK3cUv2sM9Ev2e5Xqd-3L5Guu8BO7jaQ4BKn4nXc0Uq375M2i9-hPS_24RrmLkxLRba3EqXp-2lXnaYzIccyt1ddyfTEAE8tvh7uF6L-CJmHar" nonce="e97d40f6ec406532c79ad2a6da58bf9c" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTUzMmRiMjlmOTEmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNzYzMjUyMzE5NTk4MzQ2NjQ4JnRoPTE4Nzg1NGE0N2YwYjAxOTgmdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX2xnaTJlaG9mMyZzYWRkYmF0PUFOR2pkSjg2MGh2VEdQdF9ySUk1QVpkNnZVUTh1Q3J1V1lwM0JxelozT3lReG1TNk5sekU4NTNwNkg4SUJYNHFDX0NjSEppdzhVWHpPTXBfQlhGY2c5Tk52LVdTZ0JKdXNyOGtNak5WYTJvYWtFTFRUYWVWNFg2MF90LVV5empQX2Q4N2xOZFlZNlN0c0JRLTNJVlZzQTVmT1VCblQxWTUyb2g5VnoybDh2M2FaSEVXY3JSYW14WVkwaWxVWTR5SHl1a0NXa1FtM1FIeC1HNmhpYUR1S2EwaElDdjdhR1BwMTdxZDhHVkRhSGY4dGhsbmdMVlpRaDVnN1ZJaHJzTUtBVmNNTEg3SVpoY2RQeDdLa0ZWU0RtY1RSamtWV3NpN0pNR3pkTUxYOTkxZGdfMU1tWDNPcEwyUFBsMnpleEZMWTA1dV9ISF9uTlF2aDRmdDhvaXp5N3Iwc1BvbktEWWR5cEhjMVZFVmdpOG9wajhwWXdNUWg2RnhlWWVsUkwxQWNTQ2x1UElRektrOS1xWlhyRlpEdUFXcHByZkZqNXRtR051QzNneDRpWG9BNjNPUGNNVTFXNy1hTktmcmhWMGk3T3h4S1BqanBkTjBjc2gycVRkVkl2X29uTHZ3S3pYbFFaZnRSUmxIRDYzb3N2dVRlam9qRmp4Zl9hR0Z4Zk1yb19OT0FQUFllWEJWVkNLbW44QWRoY21lZVVHUDlyRVlCZGFwQ25EaFF2QWhRQzQzdXNwelowWks2RzRXTUtlTWgtOTA4bVRlYl9zcVNNZVRkemkzaWpfZWpITFk5QmxCVzZZWXpkY19INVU5M2tlR3owaXhVTGdIWTg1NW1yRlVXeDZFSU1VUmU2SWtDNG1uTWhfMVpYVkFwY3pwcFJ4QUcwRzJJV0FOY1NHdWUyWXBxMkRsNWVsa3VWVS0taS1DNTFGS0M0cldhMTdoV0IwbElNaUVlQkR0d2Y5Q2pxVExFTlZUSXZUNkJfRktudzBFMDJqSUlIM1NBTnhKUmFxallMSE5xQUJ6NGo2YkJRN3pWQ0RuVktURWVFcVd4Z2pQQnU3dHJZQjFYZVFRTnRKV2x6UFlobDFSYkZzSWFxcTd2c0FyMUpmQU9GQTRPYUlDT05TRENpbmR1TWRjOFNZQ0lqVXo4TkxUQnc5VWtlQWprS3VNV0o0MjJlVFI4ZHMtLUZmMlpMb2I0TVZEUExJRVdSZ2tRcjdFbGlnWTdMNEdJckpFRDdmbVZqVWU2UDBfdVVJN1Roa2IwUkFtdzNjdWlzOWFkV2pqeUxxTGM4NVhzSXE5b1RpWDBwc2o2WXYyblJsSS1Idzg1REJkeWpWcmFnbm9aS2VxbHk2ZFMyMlJrbGVvaS1vWWpXamlnU3g1aElva0tsRmM3M05VRFdvMXhXci1kMHlIRTItYVZieHJKc2dFeGVsMW8xR1VzZDJ6aGZaZnZjRzFMTVhUV0xmZjJjNHBEVGlfQWUzWS1QVW9uWWZ5ZnhfX3NB"/>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+	  	   background-image: url('https://img.freepik.com/free-vector/couple-professionals-analyzing-graphs_74855-4393.jpg?w=996&t=st=1681714517~exp=1681715117~hmac=183484d6955ea8625311a8cd690d78f31038b84a959ed799c7d080c603abb224');
+	  	   background-position: center;
+	  	   background-size: cover;
+	  	   font-family: sans-serif;
+	  	   margin-top: 40px;
+        }
+
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 4px 4px 25px #000;
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #264653;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #264653;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background: #264653;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffb5a7;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 4px 4px 25px #000;
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #264653;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #264653;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background: #264653;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffb5a7;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  nav li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+	
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:8000/home2/">Back</a></li>
+        
+      </ul>
+    </nav>
+    
+  </header>
+<br>
+
+<center>
+  <H1 style="color:#264653;"> Check For An Approval !</H1>
+</center>
+<form action="#" method="post">
+    {% csrf_token %}
+    {% load static %}
+    
+<div class="wrapper">
+    <div class="title">
+      Loan Approval Prediction Form
+    </div>
+
+      <div class="form">
+         <div class="inputfield">
+            <label>Gender</label>
+            <div class="custom_select">
+              <select name="gender">
+                <option value="">Select</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+            </div>
+         </div> 
+
+         <div class="inputfield">
+            <label>Martial Status</label>
+            <div class="custom_select">
+              <select name="married">
+                <option value="">Select</option>
+                <option value="0">Married</option>
+                <option value="1">Single</option>
+              </select>
+            </div>
+         </div> 
+
+          <div class="inputfield">
+            <label>Number Of Dependents</label>
+            <input type="number" class="input" name="dependents" min="0">
+         </div> 
+
+         <div class="inputfield">
+            <label>Educational Background</label>
+            <div class="custom_select">
+              <select name="education">
+                <option value="">Select</option>
+                <option value="0">Graduate</option>
+                <option value="1">Non Graduate</option>
+              </select>
+            </div>
+         </div> 
+
+        <div class="inputfield">
+            <label>Employment Background</label>
+            <div class="custom_select">
+              <select name = "selfemployed">
+                <option value="">Select</option>
+                <option value="0">Self-Employed</option>
+                <option value="1">Non Self-Employed</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+          <label>Applicant Income (Monthly)</label>
+          <input type="number" class="input" name="applicantIncome" min="0">
+        </div> 
+
+        <div class="inputfield">
+          <label>Co-Applicant Income</label>
+          <input type="number" class="input" name="coapplicantIncome" min="0">
+        </div> 
+   
+        <div class="inputfield">
+          <label>Loan Amount in $</label>
+          <input type="number" class="input" name="loanAmount" min="0">
+        </div> 
+
+        <div class="inputfield">
+            <label>Loan Term in Days</label>
+            <input type="number" class="input" name="loanterm" min="0">
+        </div> 
+
+        <div class="inputfield">
+            <label>Credit History</label>
+            <div class="custom_select">
+              <select name = "credit_history">
+                <option value="">Select</option>
+                <option value="1">Good</option>
+                <option value="0">Bad</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Property Area</label>
+            <div class="custom_select">
+              <select name = "propertyarea">
+                <option value="">Select</option>
+                <option value="0">Rural</option>
+                <option value="1">Semi Urban</option>
+                <option value="2">Urban</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+          <input type="submit" value="Predict" class="btn"><br>
+          
+        </div>
+        <center>Get back to home page <a href="http://127.0.0.1:8000/back2/" type="submit"> Back </a></center><br>
+      </form>
+    </div>   
+</div>
+<br>
+<center><p><font size="5.5" color="#264653"> {{ msg }} </font></p></center> <br><br>
+
+
+</body>
+</html>

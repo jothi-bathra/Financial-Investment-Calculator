@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	 *{
+	  margin: 0;
+	  padding: 0;
+      }
+	  body{
+	  	   background-image: url('https://img.freepik.com/free-vector/digital-money-inr-indian-rupee-trading-concept-background_1017-41187.jpg?size=626&ext=jpg&ga=GA1.1.7009757.1681041656&semt=sph');
+	  	   background-position: center;
+	  	   background-size: cover;
+	  	   font-family: sans-serif;
+	  	   margin-top: 40px;
+        }
+   .regform{
+   	         width: 800px;
+   	         background-color: rgb(0,0,0,0.6);
+   	         margin: auto;
+   	         color: #FFFFFF;
+   	         padding: 10px 0px 10px 0px;
+   	         text-align: center;
+   	         border-radius: 15px 15px 0px 0px;
+           }
+   .main{
+  	    background-color: rgb(0,0,0,0.5);
+  	    width: 800px;
+  	    margin: auto;
+       }
+     form{
+     	  padding: 20px;
+     	 }
+  #name{
+  	    width: 100%;
+  	    height: 100px;
+  	   }
+.Name{
+  	     position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:480px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+        }
+  .email{
+  	     position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:480px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+        }
+  
+
+  .password{
+  	        position:relative;
+  	        left: 200px;
+  	        top: -37px;
+  	        line-height: 40px;
+  	        width:480px;
+  	        border-radius: 6px;
+  	        padding: 0 22px;
+  	        font-size: 16px;
+  	        color: #555;
+           }
+  .cpass{
+          position:relative;
+          left: 200px;
+          top: -37px;
+          line-height: 40px;
+          width:480px;
+          border-radius: 6px;
+          padding: 0 22px;
+          font-size: 16px;
+          color: #555;
+         }
+    button{
+    	   background-color: #3BAF9F;
+    	   display: block;
+    	   margin: 20px 0px 0px 20px;
+    	   text-align: center;
+    	   border-radius: 12px;
+    	   border: 2px solid #366473;
+    	   padding: 14px 110px;
+    	   outline: none;
+    	   color: white;
+    	   cursor: pointer;
+    	   transition: 0.25px;
+          }
+     button:hover{
+     	          background-color: #5390F5;
+                 }
+	</style>
+</head>
+<body>
+	<div class ="regform"><h1> SIGNUP</h1></div><br>
+	<div class="regform"> <h1></h1></header></div>
+	<div class ="main">
+		<form action="#" method="post">
+			{% csrf_token %}
+            {% load static %}
+            <h2 class="name">Name</h2>
+			<input class="Name" type="text" name="name" placeholder="Enter Name" required="required">
+
+			<h2 class="name">Email</h2>
+			<input class="email" type="text" name="email" placeholder="Enter Email" required="required">
+
+
+
+			
+
+
+			</select>
+
+			<h2 class="name">Password</h2>
+                <input class="password" type="password" name="password" placeholder="Enter Password" required="required">
+			
+			<h2 class="name">C Password</h2>
+				<input class="cpass" type="password" name="cpass" placeholder="Enter confirm password " required="required">
+	
+
+            <center><button type="submit">SIGNUP</button><br>
+                Already an accounct <a href="http://localhost:8000/login/"> Login </a></center><br>
+               
+		</form>
+	</div>
+
+</body>
+</html>

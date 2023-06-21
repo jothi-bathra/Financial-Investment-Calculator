@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	 *{
+	  margin: 0;
+	  padding: 0;
+      }
+	  body{
+	  	   background-image: url('https://img.freepik.com/free-photo/heap-chocolate-coins_23-2147748111.jpg?w=826&t=st=1681711301~exp=1681711901~hmac=ba06b4a7723b39254992da2c441da773426822085c13761e46e36594099917a9');
+	  	   background-position: center;
+	  	   background-size: cover;
+	  	   font-family: sans-serif;
+	  	   margin-top: 40px;
+        }
+   .regform{
+   	         width: 800px;
+   	         background-color: rgb(0,0,0,0.6);
+   	         margin: auto;
+   	         color: #FFFFFF;
+   	         padding: 10px 0px 10px 0px;
+   	         text-align: center;
+   	         border-radius: 15px 15px 0px 0px;
+           }
+   .main{
+  	    background-color: rgb(0,0,0,0.5);
+  	    width: 800px;
+  	    margin: auto;
+       }
+     form{
+     	  padding: 20px;
+     	 }
+  #name{
+  	    width: 100%;
+  	    height: 100px;
+  	   }
+ 
+  .email{
+  	     position:relative;
+  	     left: 200px;
+  	     top: -37px;
+  	     line-height: 40px;
+  	     width:480px;
+  	     border-radius: 6px;
+  	     padding: 0 22px;
+  	     font-size: 16px;
+  	     color: #555;
+        }
+  
+ 
+  .password{
+  	        position:relative;
+  	        left: 200px;
+  	        top: -37px;
+  	        line-height: 40px;
+  	        width:480px;
+  	        border-radius: 6px;
+  	        padding: 0 22px;
+  	        font-size: 16px;
+  	        color: #555;
+           }
+ 
+    button{
+    	   background-color: #3BAF9F;
+    	   display: block;
+    	   margin: 20px 0px 0px 20px;
+    	   text-align: center;
+    	   border-radius: 12px;
+    	   border: 2px solid #366473;
+    	   padding: 14px 70px;
+    	   outline: none;
+    	   color: white;
+    	   cursor: pointer;
+    	   transition: 0.25px;
+          }
+     button:hover{
+     	          background-color: #5390F5;
+                 }
+	</style>
+</head>
+<body>
+	<div class ="regform"><h1> APY</h1></div><br>
+	<div class="regform"> <h1> </h1></header></div>
+	<div class ="main">
+		<form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+			
+
+			<h2 class="name">Principle amount</h2>
+			<input class="email" type="text" name="amount" placeholder="Enter in multiples of 500" required="required">
+
+			
+			<h2 class="name">Time period</h2>
+                <input class="password" type="text" name="time" required="required">
+			
+
+
+            <center>
+                <h2 class="name">Current rate of annual interest is 1%</h2><br>
+                <button type="submit">CALCULATE</button><br>
+                Get back to home page <a href="http://127.0.0.1:8000/back/"> Back </a></center><br>
+               <center><h3> {{ r }}</h3></center>
+               
+		</form>
+	</div>
+<h4>The Atal Pension Yojana is a pension scheme that was introduced in the Union Budget of 2015 – 2016, and it targeted individuals who were employed in the unorganized sector. It is a scheme that is also open to the private sector and does not have a pension benefit. </h4>
+</body>
+</html>
